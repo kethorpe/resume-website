@@ -1,7 +1,7 @@
 // Edit this file with your own details. Everything on the page comes from here.
 
 export const profile = {
-  name: "Frederick Thorpe",
+  name: "Ted Thorpe",
   title: "Software Architect",
   location: "Denver, CO",
   summary:
