@@ -152,6 +152,28 @@ button.link { background: none; color: var(--accent); padding: 0; font-weight: 5
 .actions button.link { margin-left: 0; }
 button.link.danger { color: var(--danger); }
 
+/* ---- recommendation status + contact ---- */
+.group-title { margin: 2rem 0 0.25rem; }
+.quotes.pending { margin-bottom: 2.5rem; }
+.quotes.pending li { border-left: 3px solid var(--accent); padding-left: 1rem; }
+.badge {
+  display: inline-block; margin-right: 0.6rem; padding: 0 0.6rem;
+  font-family: var(--display); font-size: 0.85rem; font-weight: 700; line-height: 1.6;
+  color: var(--accent); border: 1px solid var(--accent); border-radius: 999px;
+}
+.row-actions { display: flex; align-items: center; gap: 1.25rem; flex-wrap: wrap; margin-top: 0.6rem; }
+.row-actions button { padding: 0.4rem 0.9rem; font-size: 0.95rem; }
+.row-actions button.link { padding: 0; margin-left: 0; }
+.status {
+  background: var(--panel); border: 1px solid var(--line); border-left: 3px solid var(--accent);
+  border-radius: 4px; padding: 0.75rem 1rem; margin: 0 0 1.25rem; max-width: 30rem;
+}
+.status p { margin: 0 0 0.4rem; }
+.counter { text-align: right; margin-top: -0.5rem; }
+
+/* Honeypot field: off-screen, not display:none, so simple bots still fill it in. */
+.hp { position: absolute; left: -10000px; width: 1px; height: 1px; overflow: hidden; }
+
 /* ---- small screens ---- */
 @media (max-width: 52rem) {
   .page { grid-template-columns: minmax(0, 1fr); gap: 2.5rem; }

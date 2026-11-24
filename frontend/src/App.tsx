@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { education, experience, profile, projects, skills } from "./resumeData";
 import { getUser, type User } from "./auth";
+import ContactForm from "./components/ContactForm";
 import Testimonials from "./components/Testimonials";
 import portrait from "./assets/portrait.jpg";
 
@@ -33,6 +34,7 @@ export default function App() {
           <a href="#projects">Projects</a>
           <a href="#education">Education</a>
           <a href="#recommendations">Recommendations</a>
+          <a href="#contact">Contact</a>
         </nav>
       </aside>
 
@@ -95,6 +97,8 @@ export default function App() {
         </section>
 
         <Testimonials user={user} onUserChange={setUser} />
+
+        <ContactForm />
       </main>
     </div>
   );

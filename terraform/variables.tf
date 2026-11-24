@@ -33,3 +33,21 @@ variable "domain_name" {
   type        = string
   default     = null
 }
+
+variable "contact_to_email" {
+  description = "Where contact-form messages are emailed. SES will send a verification link to this address; click it once. Leave null to store messages without emailing them."
+  type        = string
+  default     = null
+}
+
+variable "contact_ip_limit_per_hour" {
+  description = "Contact-form messages allowed per visitor IP per hour."
+  type        = number
+  default     = 3
+}
+
+variable "contact_global_limit_per_day" {
+  description = "Contact-form messages allowed across all visitors per day. Also caps SES sends."
+  type        = number
+  default     = 50
+}
